@@ -1,5 +1,5 @@
 {%
-   include-markdown "../../common-subs/coming-soon.md"
+   include-markdown "https://github.com/kubestellar/kubestellar/blob/main/docs/content/common-subs/coming-soon.md"
    start="<!--coming-soon-start-->"
    end="<!--coming-soon-end-->"
 %}
@@ -127,7 +127,7 @@ Your selected Action workflow will execute and the results will be available whe
 
 ## Create a Pull Request (PR) from your Github repo branch in order to request review and approval from the Kubestellar team
 
-Take a look at [the contribution guidelines](../contributing-inc.md).
+Take a look at [the contribution guidelines](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/contributing-inc.md).
 
 You can create a Pull Request from your Github web repository by selecting the "Compare & pull request" button.
 

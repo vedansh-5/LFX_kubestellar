@@ -4,7 +4,7 @@ Medium - [Make Multi-Cluster Scheduling a No-Brainer](https://medium.com/@waltfo
 ### Turbonomic and KubeStellar Demo Day
 <p align=center>
 <div id="spinner1">
-  <img width="140" height="140" src="../../../images/spinner.gif" class="centerImage">
+  <img width="140" height="140" src="https://github.com/kubestellar/kubestellar/blob/main/docs/content/images/spinner.gif" class="centerImage">
 </div>
 <iframe class="centerImage" id="embed1" width="0" height="0" src="https://www.youtube.com/embed/B3jZTnu1LDo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="visibility:hidden;" onload= "document.getElementById('spinner1').style.display='none';document.getElementById('embed1').style.visibility='visible';document.getElementById('embed1').width='720';document.getElementById('embed1').height='400';"></iframe>
 </p>
@@ -18,7 +18,7 @@ For the first step (Turbonomic -> GitHub repository), a controller named "[chang
 
 There's also [a piece of code](https://github.com/edge-experiments/turbonomic-integrations) which intercepts Turbonomic actions and creates CRs for the above change reconciler.
 
-For the second step (GitHub repository-> KubeStellar), we can use Argo CD. The detailed procedure to integrate Argo CD with KubeStellar is documented [here](./argocd.md).
+For the second step (GitHub repository-> KubeStellar), we can use Argo CD. The detailed procedure to integrate Argo CD with KubeStellar is documented [here](https://github.com/kubestellar/kubestellar/blob/main/docs/content/Community/partners/argocd.md).
 
 As we can see from the blog and the demo, Turbonomic collects data from edge clusters. This is made possible by installing [kubeturbo](https://github.com/turbonomic/kubeturbo) into each of the edge clusters.
 
@@ -26,7 +26,7 @@ As we can see from the blog and the demo, Turbonomic collects data from edge clu
 ### Turbonomic and KubeStellar in the news
 <p align=center>
 <div id="spinner2">
-    <img width="140" height="140" src="../../../images/spinner.gif" class="centerImage">
+    <img width="140" height="140" src="https://github.com/kubestellar/kubestellar/blob/main/docs/content/images/spinner.gif" class="centerImage">
 </div>
 <iframe class="centerImage" id="embed2" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7066466334334668800" scrolling=no height="0" width="0" frameborder="0" allowfullscreen="" title="Embedded post" style="visibility:hidden;" onload= "document.getElementById('spinner2').style.display='none';document.getElementById('embed2').style.visibility='visible';document.getElementById('embed2').width='740';document.getElementById('embed2').height='400';"></iframe>
 </p>

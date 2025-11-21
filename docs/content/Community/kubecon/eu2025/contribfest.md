@@ -1,6 +1,6 @@
 # Join us for KubeStellar's Contribfest at KubeCon EU 2025 in London, UK!
 
-![KubeStellar Contribfest KubeCon EU 2025 London, UK](./contribfest-2025.jpg)
+![KubeStellar Contribfest KubeCon EU 2025 London, UK](https://github.com/kubestellar/kubestellar/blob/main/docs/content/Community/kubecon/eu2025/contribfest-2025.jpg)
 
 We’re thrilled to be hosting a Contribfest session at KubeCon + CloudNativeCon Europe 2025 in London, UK! Join us on Thursday, April 3, 2025, from 4:00pm to 5:15pm BST in ExceL London, Level 3 | ICC Capital Suite 1.
 

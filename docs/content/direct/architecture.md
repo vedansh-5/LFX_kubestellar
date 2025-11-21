@@ -2,7 +2,7 @@
 
 KubeStellar provides multi-cluster deployment of Kubernetes objects, controlled by simple `BindingPolicy` objects, where Kubernetes objects are expressed in their native format with no wrapping or bundling. The high-level architecture for KubeStellar is illustrated in Figure 1.
 
-![Figure 1 - High Level Architecture](./images/high-level-architecture.svg)
+![Figure 1 - High Level Architecture](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/high-level-architecture.svg)
 
 KubeStellar relies on the concept of *spaces*.  
 A Space is an abstraction to represent an API service that 
@@ -32,7 +32,7 @@ we will not differentiate between these roles. Instead we will use the term
 'user' broadly, without attempting to make distinctions among roles.
 
 Examples of user interactions with KubeStellar are illustrated in the
-[KubeStellar Usage Example Scenarios](./example-scenarios.md) document.
+[KubeStellar Usage Example Scenarios](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md) document.
 
 The KubeStellar architecture has the following main modules.
 
@@ -57,7 +57,7 @@ that are put in a mailbox namespace are delivered to the matching WEC.
 to find objects that are synced by the OCM agent, gets their status 
 and updates `WorkStatus` objects in the ITS namespace associated with the WEC.
 
-![Figure 2 - Main Modules](./images/main-modules.svg)
+![Figure 2 - Main Modules](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/main-modules.svg)
 
 ## KubeStellar Controller Manager
 
@@ -73,7 +73,7 @@ of clusters that were selected by the `BindingPolicy` selectors.
 * The status controller watches for *WorkStatus* objects on the ITS
   and, based on the instructions in the `BindingPolicy` and
   `StatusCollector` objects, returns reported state into the WDS in
-  [the two defined ways](combined-status.md).
+  [the two defined ways](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/combined-status.md).
 
 There is one instance of a KubeStellar Controller Manager for each WDS. 
 Currently this controller-manager runs in the KubeFlex hosting cluster and is responsible for installing the required 
@@ -272,7 +272,7 @@ There are two controllers in the KubeStellar controller manager:
   Binding Controller, regarding workload objects and
   BindingPolicies. The Status Controller gets reported state from the
   ITS back to the WDS, in [the two supported
-  ways](combined-status.md): combining reported state from multiple
+  ways](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/combined-status.md): combining reported state from multiple
   WECs to a query result object, and copying status from a single WEC
   to the original workload object.
 
@@ -315,7 +315,7 @@ The architecture and the event flow of the code for create/update object events 
 illustrated in Figure 3 (some details are omitted to make the flow easier
 to understand).
 
-![Figure 3 - Binding Controller](./images/binding-controller.svg)
+![Figure 3 - Binding Controller](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/binding-controller.svg)
 
 At startup, the controller code sets up the dynamic informers, the event
 handler and the work queue as follows:
@@ -430,7 +430,7 @@ outputs, which are the `CombinedStatus` objects.
 
 The high-level flow for the singleton status update is described in Figure 4.
 
-![Figure 4 - Status Controller](./images/status-controller.svg)
+![Figure 4 - Status Controller](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/status-controller.svg)
 
 
 ### Transport Controller
@@ -452,7 +452,7 @@ We expect to have more transport plugin options in the future.
 
 The following section describes how transport controller works, while the described behavior remains the same no matter which transport plugin is selected. The high level flow for the transport controller is described in Figure 5.
 
-![Figure 5 - Transport Controller](./images/transport-controller.svg)
+![Figure 5 - Transport Controller](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/transport-controller.svg)
 
 The transport controller is driven by `Binding` objects in the WDS. There is a 1:1 correspondence between `Binding` objects and `BindingPolicy` objects, but the transport controller does not care about the latter. A `Binding` object contains (a) a list of references to workload objects that are selected for distribution and (b) a list of references to the destinations for those workload objects.
 

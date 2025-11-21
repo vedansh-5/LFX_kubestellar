@@ -74,7 +74,7 @@ The primary product was the OCM Transport Controller, which is built from generi
 
 ### WARNING
 
-Literal KubeStellar release numbers appear here, and are historical. The version of this document in a given release does not mention that release. See [the release process](release.md) for more details on what self-references are and are not handled.
+Literal KubeStellar release numbers appear here, and are historical. The version of this document in a given release does not mention that release. See [the release process](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/release.md) for more details on what self-references are and are not handled.
 
 ### Outline of publishing
 
@@ -142,7 +142,7 @@ The dashed dependencies are at run time, not build time.
 **NOTE**: among the references to published artifacts, some have a
   version that is maintained in Git while others have a placeholder in
   Git that is replaced in the publishing process. See [the release
-  document](release.md) for more details. This is an on-going matter
+  document](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/release.md) for more details. This is an on-going matter
   of development.
 
 ### Local copy of KubeStellar git repo
@@ -190,20 +190,20 @@ KubeStellar has one container image, for what is called the
 KubeStellar controller-manager. For each WDS, KubeStellar has a pod
 running that image. It installs the needed custom resource
 _definition_ objects if they are not already present, and is a
-controller-manager hosting the per-WDS controllers ([binding controller](architecture.md#binding-controller) and [status controller](architecture.md#status-controller)) from the kubestellar repo.
+controller-manager hosting the per-WDS controllers ([binding controller](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/architecture.md#binding-controller) and [status controller](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/architecture.md#status-controller)) from the kubestellar repo.
 
 The image repository is `ghcr.io/kubestellar/kubestellar/controller-manager`.
 
 By our development practices and not doing any manual hacking we maintain the association that the container image tagged `$VERSION` is built from the Git commit having the Git tag `v$VERSION`.
 
-The [release process](release.md) builds and publishes that container image.
+The [release process](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/release.md) builds and publishes that container image.
 
 `make ko-build-controller-manager-local` will make a local image for just the local
 platform. This is used in local testing.
 
 ### OCM Transport Controller container image
 
-The [release process](release.md) builds and publishes this image at [ghcr.io/kubestellar/kubestellar/ocm-transport-controller](https://github.com/kubestellar/kubestellar/pkgs/container/kubestellar%2Focm-transport-controller).
+The [release process](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/release.md) builds and publishes this image at [ghcr.io/kubestellar/kubestellar/ocm-transport-controller](https://github.com/kubestellar/kubestellar/pkgs/container/kubestellar%2Focm-transport-controller).
 
 By our development practices and not doing any manual hacking we maintain the association that the container image tagged `$VERSION` is built from the Git commit having the Git tag `v$VERSION`.
 
@@ -228,7 +228,7 @@ The container image at `quay.io/kubestellar/helm:3.14.0` was built by `hack/buil
 
 ### KubeStellar core Helm chart
 
-This Helm chart is instantiated in a pre-existing Kubernetes cluster and (1) makes it into a KubeFlex hosting cluster and (2) sets up a requested collection of WDSes and ITSes. See [the core chart doc](core-chart.md). This chart is defined in the `core-chart` directory and published to `ghcr.io/kubestellar/kubestellar/core-chart`.
+This Helm chart is instantiated in a pre-existing Kubernetes cluster and (1) makes it into a KubeFlex hosting cluster and (2) sets up a requested collection of WDSes and ITSes. See [the core chart doc](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md). This chart is defined in the `core-chart` directory and published to `ghcr.io/kubestellar/kubestellar/core-chart`.
 
 The chart's `templates/` generate KubeFlex `ControlPlane` objects for
 the ITSes and WDSes specified in the chart's "values". These use the
@@ -264,7 +264,7 @@ By our development practices and not doing any manual hacking, we maintain the a
 
 ### Scripts and instructions
 
-There are instructions for using a release ([Getting Started](get-started.md) document) and a setup script for end-to-end testing(`test/e2e/common/setup-kubestellar.sh`). The end-to-end testing can either test the local copy/version of the kubestellar repo or test a release. So there are three cases to consider.
+There are instructions for using a release ([Getting Started](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md) document) and a setup script for end-to-end testing(`test/e2e/common/setup-kubestellar.sh`). The end-to-end testing can either test the local copy/version of the kubestellar repo or test a release. So there are three cases to consider.
 
 #### 'Getting Started' setup instructions
 

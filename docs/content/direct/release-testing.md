@@ -16,7 +16,7 @@ Due to the lack of OCP based automatic testing, these tests will be performed on
 Note:  We plan to automate all release tests in the future
 
 ### Automatic (github based) release tests
-KubeStellar CICD automatically runs a set of e2e tests on each new release. Currently these tests include 2 main test types bash based e2e tests and ginkgo based e2e tests. The bash test basically tests the scenario of  [multi-cluster workload deployment with kubectl](example-scenarios.md#scenario-1-multi-cluster-workload-deployment-with-kubectl). The ginkgo test cover the [Singleton status test](example-scenarios.md#scenario-4-singleton-status), and several other tests that are listed in the test [README](https://github.com/kubestellar/kubestellar/blob/main/test/e2e/ginkgo/README.md). Note, however, that the content of the releases tests may be changed in the future. We will refer to those tests as the **e2e release tests**. 
+KubeStellar CICD automatically runs a set of e2e tests on each new release. Currently these tests include 2 main test types bash based e2e tests and ginkgo based e2e tests. The bash test basically tests the scenario of  [multi-cluster workload deployment with kubectl](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md#scenario-1-multi-cluster-workload-deployment-with-kubectl). The ginkgo test cover the [Singleton status test](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md#scenario-4-singleton-status), and several other tests that are listed in the test [README](https://github.com/kubestellar/kubestellar/blob/main/test/e2e/ginkgo/README.md). Note, however, that the content of the releases tests may be changed in the future. We will refer to those tests as the **e2e release tests**. 
 The automatic tests are running on github hosted runners of type **Ubuntu latest (currently 22.04) X86 64 bit** 
 Note: When a new release is created please verify that the automatic tests indeed executed and passed. 
 
@@ -25,7 +25,7 @@ As many of the KubeStellar customers are using OCP, the release tests should be 
 Currently these tests should be initiated manually on a dedicated OCP cluster that is reserved for the release testing process. 
 
 TODO: The details on how to setup and run the test
-![](./images/construction.png){: style="height:100px;width:100px"}
+![](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/construction.png){: style="height:100px;width:100px"}
 
 ## Other platforms
 KubeStellar is also used on other platforms such as ARM64, MacOS, etc.. Currently these platforms are not part of the routine release testing, however the KubeStellar team will try its best to help and solve issues detected on other platforms as well. Users should go through the regular procedure of opening issues against the KubeStellar [project](https://github.com/kubestellar/kubestellar/) .

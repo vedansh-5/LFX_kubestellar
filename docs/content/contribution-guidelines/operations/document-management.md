@@ -27,7 +27,7 @@ rendering take precedence.
 
 ### Style Guide
 
-With more contributors writing pages for our documentation, we are implementing a [Style Guide](docs-styleguide.md) to help ensure more usable documenations with a consistent style and voice.
+With more contributors writing pages for our documentation, we are implementing a [Style Guide](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/docs-styleguide.md ) to help ensure more usable documenations with a consistent style and voice.
 
 ### GitHub pages
 
@@ -100,7 +100,7 @@ in your PR.
     **NOTE: If you already created a fork but only included the main branch** then you can remedy the problem by propagating the `gh-pages` branch into your fork using `git` commands
 
 5. Go to the Settings tab of your fork, select "Pages" in the navigation panel on the left, and make sure that you have told GitHub to publish your site based on the contents of the `gh-pages` branch in your fork. It will look something like the following
-    ![Configure publishing your GitHub pages](../../direct/images/github-pages-config-example.png)
+    ![Configure publishing your GitHub pages](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/github-pages-config-example.png)
 
 #### Enabling GitHub pages for a fork that already exists
 
@@ -342,10 +342,10 @@ These variables can be referenced as \{\{ page.meta.short_name \}\} and \{\{ pag
 We make extensive use of 'include-markdown' to help us keep our documentation modular and up-to-date.  To use 'include-markdown' you must add a block in your document that refers to a block in your external document content:
 
 In your original markdown document, add a block that refers to the external markdown you want to include:
-![Include Markdown](include-markdown-example.png)
+![Include Markdown](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/include-markdown-example.png)
 
 In the document you want to include, add the start and end tags you configured in the include-markdown block in your original document:
-![Included Markdown](included-markdown-example.png)
+![Included Markdown](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/included-markdown-example.png)
 
 for more information on the 'include-markdown' plugin for mkdocs look [here](https://github.com/mondeja/mkdocs-include-markdown-plugin)
 

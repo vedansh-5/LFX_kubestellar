@@ -14,18 +14,18 @@ This documents explains how to use the KubeStellar core Helm chart to:
 - register every WDS as a target cluster in Argo CD; and
 - create Argo CD applications as specified by the chart values.
 
-For a detailed step-by-step installation guide with expected outputs, see [Step-by-Step Installation Guide](core-chart.md).
+For a detailed step-by-step installation guide with expected outputs, see [Step-by-Step Installation Guide](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md).
 
 ## Pre-requisites
 
 Before installing Argo CD with KubeStellar Core chart, ensure you have:
 
-- All prerequisites from [installing KubeStellar using the Core chart](core-chart.md#pre-requisites)
+- All prerequisites from [installing KubeStellar using the Core chart](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md#pre-requisites)
 - A properly configured KubeFlex hosting cluster
 - Helm installed and configured
 - kubectl access to your cluster
 
-The settings described in this document are an extension of the KubeStellar Core chart settings described [here](core-chart.md#kubestellar-core-chart-values).
+The settings described in this document are an extension of the KubeStellar Core chart settings described [here](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/include-markdown-example.png#kubestellar-core-chart-values).
 
 > The KubeStellar core chart can optionally be used to install Argo CD in the KubeFlex hosting cluster and register each KubeStellar WDS as an Argo CD target cluster. The core chart also has the option to define some Argo CD Applications.  
 > This section will cover installing Argo CD and mapping WDSes to target clusters; the next section will show how to also define some Applications.
@@ -120,11 +120,11 @@ Open your browser and navigate to: `https://argocd.localtest.me:9443/`
 - **Password**: Use the password obtained from the previous command (e.g., `EpQ2-OMgvfdHiMiD`)
 
 > **Note:** If you encounter SSL certificate warnings in your browser, proceed with "Advanced" → "Proceed to argocd.localtest.me (unsafe)" or similar option, as this is expected for local development setups.
-![alt text](images/argo-cd-signin-page.png)
+![alt text](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/argo-cd-signin-page.png)
 
 ## Deploying Argo CD applications
 
-The KubeStellar Core chart can also be used to deploy Argo CD applications as specified by chart values. The example below shows the relevant fragment of the chart values that could be used for deploying an application corresponding to `scenario-6` in [KubeStellar docs](example-scenarios.md#scenario-6-multi-cluster-workload-deployment-of-app-with-serviceaccount-with-argocd).
+The KubeStellar Core chart can also be used to deploy Argo CD applications as specified by chart values. The example below shows the relevant fragment of the chart values that could be used for deploying an application corresponding to `scenario-6` in [KubeStellar docs](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md#scenario-6-multi-cluster-workload-deployment-of-app-with-serviceaccount-with-argocd).
 
 ```yaml
 argocd:
@@ -145,5 +145,5 @@ Alternatively, the same result can be achieved from Helm CLI by using the follow
 --set-json='argocd.applications=[ { "name": "scenario-6", "repoURL": "https://github.com/kubestellar/kubestellar.git", "path": "hack/argo/nginx", "destinationWDS": "wds1", "destinationNamespace": "nginx-sa" } ]'
 ```
 
-![alt text](images/argocd-application.png)
+![alt text](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/argocd-application.png)
 > **Important**: Currently, the KubeStellar controller does not return resource status correctly to Argo CD. This means that deployed applications may not show as "Healthy" or green in the Argo CD UI, even when they are actually running correctly on the workload execution clusters. This is a known limitation and does not indicate that your deployment has failed.

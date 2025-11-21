@@ -9,14 +9,14 @@ existing OCM system. In particular, a hub plus two managed clusters
 almost exactly as created by [the OCM Quick Start
 instructions](https://open-cluster-management.io/docs/getting-started/quick-start/).
 In terms of the [full Installation and Usage outline of
-KubeStellar](user-guide-intro.md#the-full-story), the modified OCM
+KubeStellar](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/user-guide-intro.md#the-full-story), the modified OCM
 Quick Start has already: established some, but not all, of the
 software prerequisites; acquired the ability to use a Kube cluster as
 KubeFlex hosting cluster; created an Inventory and Transport Space;
 created two Workload Execution Clusters (WECs) and registered
 them. These are the boxes outlined in red in the following flowchart.
 
-![this copy of the general installation and usage flowchart](images/ocm-usage-outline.svg).
+![this copy of the general installation and usage flowchart](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/ocm-usage-outline.svg).
 
   1. [Setup](#setup)
     1. Install remaining software prerequisites
@@ -32,11 +32,11 @@ them. These are the boxes outlined in red in the following flowchart.
 Continuing with the spirit of the OCM Quick Start, this is one way to
 produce a very simple system --- suitable for study but not production
 usage. For general setup information, see [the full
-story](user-guide-intro.md#the-full-story).
+story](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/user-guide-intro.md#the-full-story).
 
 ### Install software prerequisites
 
-The following command will check for the prerequisites that KubeStellar will need for the later steps. See [the prerequisites doc](pre-reqs.md) for more details.
+The following command will check for the prerequisites that KubeStellar will need for the later steps. See [the prerequisites doc](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/pre-reqs.md) for more details.
 
 ```shell
 bash <(curl https://raw.githubusercontent.com/kubestellar/kubestellar/v{{ config.ks_latest_release }}/scripts/check_pre_req.sh) kflex ocm helm kubectl docker kind
@@ -125,7 +125,7 @@ kflex ctx --set-current-for-hosting # make sure the KubeFlex CLI's hidden state 
 kflex ctx --overwrite-existing-context wds1
 ```
 
-For more information about this Helm chart, see [its documentation](core-chart.md).
+For more information about this Helm chart, see [its documentation](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md).
 
 ## Exercise KubeStellar
 
@@ -138,7 +138,7 @@ done
 kubectl --context wds1 wait --for condition=Established crd bindingpolicies.control.kubestellar.io
 ```
 
-Proceed to [Scenario 1 (multi-cluster workload deployment with kubectl) in the example scenarios](example-scenarios.md#scenario-1-multi-cluster-workload-deployment-with-kubectl) _after_ defining the shell variables that characterize the setup done above. Following are the settings for those variables, whose meanings are defined [at the start of the example scenarios document](example-scenarios.md#assumptions-and-variables).
+Proceed to [Scenario 1 (multi-cluster workload deployment with kubectl) in the example scenarios](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md#scenario-1-multi-cluster-workload-deployment-with-kubectl) _after_ defining the shell variables that characterize the setup done above. Following are the settings for those variables, whose meanings are defined [at the start of the example scenarios document](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md#assumptions-and-variables).
 
 ```shell
 host_context=kind-hub
@@ -155,4 +155,4 @@ label_query_one=name=cluster1
 ```
 ## Troubleshooting
 
-In the event something goes wrong, check out the [troubleshooting page](troubleshooting.md) to see if someone else has experienced the same thing
+In the event something goes wrong, check out the [troubleshooting page](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/troubleshooting.md) to see if someone else has experienced the same thing

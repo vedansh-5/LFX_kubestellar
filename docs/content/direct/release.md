@@ -4,10 +4,10 @@ This document defines how releases of the KubeStellar repository are made. This 
 
 This document starts with step-by-step instructions for the current procedure, then proceeds with the thinking behind them.
 
-See the associated [packaging and delivery doc](packaging.md) for some
+See the associated [packaging and delivery doc](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/packaging.md) for some
 clues about the problem.
 
-Every release should pass all release tests before it can be officially declare as a new stable release. Please see the details in [release-testing](release-testing.md).
+Every release should pass all release tests before it can be officially declare as a new stable release. Please see the details in [release-testing](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/known-issues.md).
 
 ## Step-by-Step
 
@@ -70,7 +70,7 @@ Making a new kubestellar release requires a contributor to do the following thin
 
 - After the release artifacts have been published, create and push to the shared repo a branch named `release-$version`. This will also trigger the workflow that tests the latest release. Every push to a branch with such a name triggers that workflow, in case there has been a change in an E2E test for that release.
 
-- Follow the procedure in [OCP testing](release-testing.md#e2e-release-tests-on-ocp), to verify that the release is functional on OCP.
+- Follow the procedure in [OCP testing](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/release-testing.md#e2e-release-tests-on-ocp), to verify that the release is functional on OCP.
 
 - If the test results are good and the release is regular (not an RC) then declare the code freeze over.
 
@@ -110,7 +110,7 @@ For each tag `v$version` the following published artifacts will be created.
 
 ## Website
 
-We use `mike` and `MkDocs` to derive and publish GitHub pages. See [the website documentation](../contribution-guidelines/operations/document-management.md) for details.
+We use `mike` and `MkDocs` to derive and publish GitHub pages. See [the website documentation](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/document-management.md) for details.
 
 The published GitHub pages are organized into "releases".  Each release in the GitHub pages corresponds to a git branch whose name begins with "release-" or is "main".
 
@@ -132,7 +132,7 @@ We will maintain a document that lists releases that pass our quality bar. The l
 
 We used to maintain a statement of what is the latest stable release in `docs/content/direct/README.md`.
 
-We maintain a [Getting Started](get-started.md) document that tells users how to exercise the release that the document appears in. This requires a self-reference that is updated as part of the release process.
+We maintain a [Getting Started](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md) document that tells users how to exercise the release that the document appears in. This requires a self-reference that is updated as part of the release process.
 
 ## Policy
 
@@ -142,7 +142,7 @@ Right after making a release we test it thoroughly.
 
 ### Deliberately feature-incomplete releases
 
-We plan a few deliberately feature-incomplete releases. They will be regular releases as far as the technology here is concerned. They will be announced only to selected users who acknowledge that they are getting something that is incomplete. In GitHub, these will be marked as "pre-releases". The status of these releases will be made clear in their documentation (which currently appears in [the release notes](release-notes.md).
+We plan a few deliberately feature-incomplete releases. They will be regular releases as far as the technology here is concerned. They will be announced only to selected users who acknowledge that they are getting something that is incomplete. In GitHub, these will be marked as "pre-releases". The status of these releases will be made clear in their documentation (which currently appears in [the release notes](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/release-notes.md).
 
 ### Website
 

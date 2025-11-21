@@ -1,6 +1,6 @@
 <!-- Note that this repo has two readme files, with content that is as nearly identical as is practical: `/README.md` and `/docs/content/readme.md` -->
 
-<img alt="" width="500px" align="left" src="../KubeStellar-with-Logo.png" />
+<img alt="" width="500px" align="left" src="https://github.com/kubestellar/kubestellar/blob/main/KubeStellar-with-Logo.png" />
 
 <br/>
 <br/>
@@ -24,7 +24,7 @@
 KubeStellar is particularly beneficial if you're currently deploying in a single cluster and are looking to expand to multiple clusters, or if you're already using multiple clusters and are seeking a more streamlined developer experience.
 
 
-![KubeStellar High Level View](./images/kubestellar-high-level.png)
+![KubeStellar High Level View](https://github.com/kubestellar/kubestellar/blob/main/docs/content/images/kubestellar-high-level.png)
 
 
 The use of multiple clusters offers several advantages, including:
@@ -43,12 +43,12 @@ KubeStellar simplifies this process by allowing developers to define a binding p
 
 ## Getting Started
 
-See the [Getting Started setup guide](direct/get-started.md) for getting started with kicking the tires.
+See the [Getting Started setup guide](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md) for getting started with kicking the tires.
 
 ## Contributing
 
 
-We ❤️ our contributors! If you're interested in helping us out, please head over to our [Contributing](contribution-guidelines/contributing-inc.md) guide.
+We ❤️ our contributors! If you're interested in helping us out, please head over to our [Contributing](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/contributing-inc.md) guide.
 
 ## Getting in touch
 

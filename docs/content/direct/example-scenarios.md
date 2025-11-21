@@ -1,10 +1,10 @@
 # KubeStellar Example Scenarios
 
-This document shows some simple examples of using the release that contains this version of this document. These scenarios can be used to test a KubeStellar installation for proper functionality. These scenarios suppose that you have done "setup". General setup instructions are outlined in [the User Guide Overview](user-guide-intro.md#the-full-story); a simple example setup is in [the Setup section of Getting Started](get-started.md#setup).
+This document shows some simple examples of using the release that contains this version of this document. These scenarios can be used to test a KubeStellar installation for proper functionality. These scenarios suppose that you have done "setup". General setup instructions are outlined in [the User Guide Overview](user-guide-intro.md#the-full-story); a simple example setup is in [the Setup section of Getting Started](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md#setup).
 
 ## Assumptions and Variables
 
-Each scenario supposes that one ITS and one WDS have been created, and that two WECs have been created and registered and also labeled for selection by KubeStellar control objects. These scenarios are written as shell commands (bash or zsh). These commands assume that you have defined the following shell variables to convey the needed information about that ITS and WDS and those WECs. For a concrete example of settings of these variables, see [the end of Getting Started](get-started.md#exercise-kubestellar).
+Each scenario supposes that one ITS and one WDS have been created, and that two WECs have been created and registered and also labeled for selection by KubeStellar control objects. These scenarios are written as shell commands (bash or zsh). These commands assume that you have defined the following shell variables to convey the needed information about that ITS and WDS and those WECs. For a concrete example of settings of these variables, see [the end of Getting Started](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md#exercise-kubestellar).
 
 - `host_context`: the name of the kubeconfig context to use when accessing the KubeFlex hosting cluster.
 - `its_cp`: the name of the KubeFlex control plane that is playing the role of ITS.
@@ -124,7 +124,7 @@ KubeStellar can handle the case where the CRD is part of the workload,
 this example concerns the case where the CRD is established in the
 WECs by some other means.
 
-For background on authorization of the OCM work agent in WECs and how to expand it safely, see [Authorization in WECs](./authorization.md).
+For background on authorization of the OCM work agent in WECs and how to expand it safely, see [Authorization in WECs](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/authorization.md).
 
 For this example, we use the `AppWrapper` custom resource defined in the
 [multi cluster app dispatcher](https://github.com/project-codeflare/multi-cluster-app-dispatcher)
@@ -503,7 +503,7 @@ kubectl --context "$wds_context" delete bindingpolicies nginx-res-bpolicy
 ## Scenario 6: Multi-Cluster Workload Deployment of App with ServiceAccount with ArgoCD
 
 Before running this scenario, install ArgoCD on the hosting cluster and configure it
-work with the WDS as outlined [here](argo-to-wds1.md).
+work with the WDS as outlined [here](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/argo-to-wds1.md).
 
 Including a ServiceAccount tests whether there will be a controller fight over a token Secret for that ServiceAccount, which was observed in some situations with older code.
 

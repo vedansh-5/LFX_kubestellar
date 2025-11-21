@@ -11,7 +11,7 @@ There are different ways you can contribute to the KubeStellar development:
   
 - **Code:** Indicate your interest in developing new features, modifying existing features, raising concerns, or fixing bugs.
 
-Before you start contributing, familiarize yourself with our community [Code of Conduct](../contribution-guidelines/coc-inc.md).
+Before you start contributing, familiarize yourself with our community [Code of Conduct](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/coc-inc.md).
 
 ## Visit the GitHub repository
 
@@ -23,9 +23,9 @@ Ensure that you comply with the rules and policy guiding the repository contribu
 
 If you are contributing via the GitHub web interface, navigate to the **Settings** section of your forked repository and enable the **Require contributors to sign off on web-based commits** setting. This will allow you to automatically sign off your commits via GitHub directly, as shown below.
 
-![signoff-via-github-ui](./images/signoff-via-github-ui.png)
+![signoff-via-github-ui](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/signoff-via-github-ui.png)
 
-If you are contributing via the command line terminal, run the `git commit --signoff --message [commit message]` or `git commit -s -m [commit message]` command when making each commit. For more detailed information about signing and signing off on commits, including steps to create signing keys and use both the `-s` and `-S` options, see [Sign-off and Signing Contributions](pr-signoff.md).
+If you are contributing via the command line terminal, run the `git commit --signoff --message [commit message]` or `git commit -s -m [commit message]` command when making each commit. For more detailed information about signing and signing off on commits, including steps to create signing keys and use both the `-s` and `-S` options, see [Sign-off and Signing Contributions](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/pr-signoff.md).
 
 
 
@@ -33,22 +33,22 @@ If you are contributing via the command line terminal, run the `git commit --sig
 
 Read the resources to gain a better understanding of the contribution processes.
 
-- **[Code of Conduct](../contribution-guidelines/coc-inc.md)** The CNCF code of conduct for the KubeStellar community
-- **[Contribution Guidelines](../contribution-guidelines/contributing-inc.md)** General Guidelines for our Github processes
-- **[Contributor Ladder](../contribution-guidelines/contributor_ladder.md)** Path for becoming a KubeStellar maintainer by contributing
-- **[License](../contribution-guidelines/license-inc.md)** The Apache 2.0 license under which KubeStellar is published
-- **[Governance](../contribution-guidelines/governance-inc.md)** The protocols under which the KubeStellar project is run
-- **[Onboarding](../contribution-guidelines/onboarding-inc.md)** The procedures for adding/removing members of our Github organization
+- **[Code of Conduct]https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/coc-inc.md)** The CNCF code of conduct for the KubeStellar community
+- **[Contribution Guidelines](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/contributing-inc.md)** General Guidelines for our Github processes
+- **[Contributor Ladder](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/contributor_ladder.md)** Path for becoming a KubeStellar maintainer by contributing
+- **[License](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/license-inc.md)** The Apache 2.0 license under which KubeStellar is published
+- **[Governance](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/governance-inc.md)** The protocols under which the KubeStellar project is run
+- **[Onboarding](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/onboarding-inc.md)** The procedures for adding/removing members of our Github organization
 - **Website**
-    - **[Build Overview](../contribution-guidelines/operations/document-management.md)** How our website is built and how to collaboratively work on changes to it using Github staging
-    - **[Style Guide](../contribution-guidelines/operations/docs-styleguide.md)** Guidelines on writing the prose parts of our documentation/website
-    - **[Testing website PRs](../contribution-guidelines/operations/testing-doc-prs.md)** how to test website changes using only your local workstation
+    - **[Build Overview](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/document-management.md)** How our website is built and how to collaboratively work on changes to it using Github staging
+    - **[Style Guide](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/docs-styleguide.md)** Guidelines on writing the prose parts of our documentation/website
+    - **[Testing website PRs](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/testing-doc-prs.md)** how to test website changes using only your local workstation
 - **Security**
-    - **[Policy](../contribution-guidelines/security/security-inc.md)** Security Policies
-    - **[Contacts](../contribution-guidelines/security/security_contacts-inc.md)** Who to contact with security concerns
-- **[Testing](testing.md)** How to use the preconfigured tests in the repository
-- **[Packaging](packaging.md)** How the components of KubeStellar are organized
-- **[Release Process](release.md)** All the steps involved in creating and publishing a new release of KubeStellar
-- **[Release Testing](release-testing.md)** Steps involved in testing a release or release candidate before merging it into the main branch.
-- **[Sign-off and Signing Contributions](pr-signoff.md)** How to properly configure your commits so they are both signed and "signed off" (and how those terms differ)
+    - **[Policy](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/security/security-inc.md)** Security Policies
+    - **[Contacts](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/security/security_contacts-inc.md)** Who to contact with security concerns
+- **[Testing](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/testing.md)** How to use the preconfigured tests in the repository
+- **[Packaging](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/packaging.md)** How the components of KubeStellar are organized
+- **[Release Process](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/release.md)** All the steps involved in creating and publishing a new release of KubeStellar
+- **[Release Testing](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/release-testing.md)** Steps involved in testing a release or release candidate before merging it into the main branch.
+- **[Sign-off and Signing Contributions](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/pr-signoff.md)** How to properly configure your commits so they are both signed and "signed off" (and how those terms differ)
 

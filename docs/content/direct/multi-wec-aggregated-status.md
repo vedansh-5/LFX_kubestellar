@@ -141,7 +141,7 @@ This aggregated status supports tools such as Argo CD in evaluating the workload
 This feature updates only the `.status` field of the workload object in the WDS. The `CombinedStatus` mechanism continues to provide detailed per-WEC information and remains available for inspection and debugging.
 
 See:  
-[Combining reported state](combined-status.md)
+[Combining reported state](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/combined-status.md)
 
 ## Limitations
 
@@ -152,9 +152,9 @@ See:
 
 ## See Also
 
-- [Binding](binding.md)
-- [Transforming desired state](transforming.md)
-- [Combining reported state](combined-status.md)
-- [Example scenarios](example-scenarios.md)
+- [Binding](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/binding.md)
+- [Transforming desired state](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/transforming.md)
+- [Combining reported state](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/combined-status.md)
+- [Example scenarios](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md)
 - DownsyncModulation API reference: https://github.com/kubestellar/kubestellar/blob/v0.29.0/api/control/v1alpha1/types.go#L138-L167
 - Argo CD health checks: https://argo-cd.readthedocs.io/en/stable/operator-manual/health/

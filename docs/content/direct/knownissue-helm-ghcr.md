@@ -3,7 +3,7 @@
 ## Description of the Issue
 
 When following the
-[Getting Started recipe](get-started.md) you might get a failure from
+[Getting Started recipe](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md) you might get a failure from
 the command to instantiate KubeStellar's core Helm chart. The error
 message is as follows.
 

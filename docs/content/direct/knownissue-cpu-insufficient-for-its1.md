@@ -1,6 +1,6 @@
 # Insufficient CPU for your clusters
 
-When following [Getting Started](get-started.md), you may find that it hangs at some point --- simply stops making progress. For example: after instantiating [the core Helm chart](core-chart.md), a `kflex ctx` command may grind to a halt with the following output and no more.
+When following [Getting Started](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md), you may find that it hangs at some point --- simply stops making progress. For example: after instantiating [the core Helm chart](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md), a `kflex ctx` command may grind to a halt with the following output and no more.
 
 ```console
 $ kflex ctx --overwrite-existing-context its1

@@ -2,7 +2,7 @@
 
 ## Set Up A Demo System
 
-This page shows two ways to create one particular simple configuration that is suitable for kicking the tires (not production usage). This configuration has one `kind` cluster serving as your KubeFlex hosting cluster and two more serving as WECs. This page covers steps 2--7 from [the full installation and usage outline](user-guide-intro.md#the-full-story). This page concludes with forwarding you to some example scenarios that illustrate the remaining steps.
+This page shows two ways to create one particular simple configuration that is suitable for kicking the tires (not production usage). This configuration has one `kind` cluster serving as your KubeFlex hosting cluster and two more serving as WECs. This page covers steps 2--7 from [the full installation and usage outline](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/user-guide-intro.md#the-full-story). This page concludes with forwarding you to some example scenarios that illustrate the remaining steps.
 
 The two ways to create this simple configuration are as follows.
 
@@ -12,11 +12,11 @@ The two ways to create this simple configuration are as follows.
 
 ### Note for Windows users
 
-For some users on WSL, use of the setup procedure on this page and/or the demo environment creation script may require running as the user `root` in Linux. There is a [known issue about this](knownissue-helm-ghcr.md).
+For some users on WSL, use of the setup procedure on this page and/or the demo environment creation script may require running as the user `root` in Linux. There is a [known issue about this](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/knownissue-helm-ghcr.md).
 
 ### Important: Shell Variables for Example Scenarios
 
-After completing the setup, you will need to define several shell variables to run the example scenarios. The meanings of these variables are defined [at the start of the example scenarios document](example-scenarios.md#assumptions-and-variables). What is shown later in this document are the specific values that are correct for the setup procedure described in this guide.
+After completing the setup, you will need to define several shell variables to run the example scenarios. The meanings of these variables are defined [at the start of the example scenarios document](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md#assumptions-and-variables). What is shown later in this document are the specific values that are correct for the setup procedure described in this guide.
 
 The key variables you'll need are:
 
@@ -31,7 +31,7 @@ If you want to quickly setup a basic environment, you can use our automated inst
 
 ### Install software prerequisites
 
-Be sure to [install the software prerequisites](pre-reqs.md) _before_ running the script!
+Be sure to [install the software prerequisites](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/pre-reqs.md) _before_ running the script!
 
 The script will check for the pre-reqs and exit if they are not present.
 
@@ -59,11 +59,11 @@ _Note: the script does the same things as described in the [Step by Step Setup](
 
 ## Step by Step Setup
 
-This walks you through the steps to produce the same configuration as does the script above, suitable for study but not production usage. For general setup information, see [the full story](user-guide-intro.md#the-full-story).
+This walks you through the steps to produce the same configuration as does the script above, suitable for study but not production usage. For general setup information, see [the full story](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/user-guide-intro.md#the-full-story).
 
 ### Install software prerequisites
 
-The following command will check for the prerequisites that you will need for the later steps. See [the prerequisites doc](pre-reqs.md) for more details.
+The following command will check for the prerequisites that you will need for the later steps. See [the prerequisites doc](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/pre-reqs.md) for more details.
 
 ```shell
 bash <(curl https://raw.githubusercontent.com/kubestellar/kubestellar/v{{ config.ks_latest_release }}/scripts/check_pre_req.sh) kflex ocm helm kubectl docker kind
@@ -147,7 +147,7 @@ kubectl --context kind-kubeflex wait controlplane.tenancy.kflex.kubestellar.org/
 kubectl --context kind-kubeflex wait -n its1-system job.batch/install-status-addon --for condition=Complete --timeout 150s
 ```
 
-*To learn more about the Core Helm Chart, refer to the [Core Helm Chart documentation](./core-chart.md)*
+*To learn more about the Core Helm Chart, refer to the [Core Helm Chart documentation](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md)*
 
 ### Create and register two workload execution clusters
 
@@ -238,13 +238,13 @@ label_query_one=name=cluster1
 
 Now that your system is running, you can try some example scenarios
 
-1. **Define the needed shell variables** using the settings from the [Variables for running the example scenarios](#variables-for-running-the-example-scenarios) section above. If you used the automated script, use the settings it output. The meanings of these variables are defined [at the start of the example scenarios document](example-scenarios.md#assumptions-and-variables).
+1. **Define the needed shell variables** using the settings from the [Variables for running the example scenarios](#variables-for-running-the-example-scenarios) section above. If you used the automated script, use the settings it output. The meanings of these variables are defined [at the start of the example scenarios document](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md#assumptions-and-variables).
 
-2. Proceed to [Scenario 1 (multi-cluster workload deployment with kubectl) in the example scenarios](example-scenarios.md#scenario-1-multi-cluster-workload-deployment-with-kubectl) and/or other examples on the same page, after defining the shell variables that characterize the configuration created above.
+2. Proceed to [Scenario 1 (multi-cluster workload deployment with kubectl) in the example scenarios](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md#scenario-1-multi-cluster-workload-deployment-with-kubectl) and/or other examples on the same page, after defining the shell variables that characterize the configuration created above.
 
 ## Next Steps
 
-The configuration created here was a basic one suitable for learning. The [full Installation and Usage outline](user-guide-intro.md#the-full-story) shows that KubeStellar has a lot of flexibility.
+The configuration created here was a basic one suitable for learning. The [full Installation and Usage outline](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/user-guide-intro.md#the-full-story) shows that KubeStellar has a lot of flexibility.
 
 - Create Kubernetes clusters any way you want
 - Multiple Inventory and Transport Spaces (ITS)
@@ -255,8 +255,8 @@ The configuration created here was a basic one suitable for learning. The [full 
 - Use the KubeFlex hosting cluster or a KubeFlex Control Plane as WDS
 - Dynamic addition and removal of Workload Execution Clusters (WECs)
 
-For general setup information, see [the full story](user-guide-intro.md#the-full-story).
+For general setup information, see [the full story](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/user-guide-intro.md#the-full-story).
 
 ## Troubleshooting
 
-In the event something goes wrong, check out the [troubleshooting page](troubleshooting.md) to see if someone else has experienced the same thing
+In the event something goes wrong, check out the [troubleshooting page](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/troubleshooting.md) to see if someone else has experienced the same thing

@@ -1,4 +1,4 @@
-# <img alt="Logo" width="90px" src="../images/kubeflex-logo.png" style="vertical-align: middle;" />  KubeFlex
+# <img alt="Logo" width="90px" src="https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/kubeflex-logo.png" style="vertical-align: middle;" />  KubeFlex
 
 One of the technologies underlying KubeStellar is KubeFlex, a kubernetes-based platform designed to:
 
@@ -37,5 +37,5 @@ To explore more fully KubeFlex's capabilities [visit the repository at https://g
 
 There is also a [introductory video about KubeFlex](https://youtu.be/vI2O0L5ijVU?si=p32OUaQU96JOs5iH) on the KubeStellar YouTube Channel
 
-![image info](images/kubeflex-architecture.png)
+![image info](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/kubeflex-architecture.png)
 

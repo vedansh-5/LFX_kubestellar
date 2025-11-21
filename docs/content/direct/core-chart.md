@@ -11,7 +11,7 @@
 
 This documents explains how to use KubeStellar Core chart to do three
 of the 11 installation and usage steps; please see [the
-full outline](user-guide-intro.md#the-full-story) for generalities and [Getting Started](get-started.md) for an example of usage.
+full outline](user-guide-intro.md#the-full-story) for generalities and [Getting Started](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md) for an example of usage.
 
 This Helm chart can do any subset of the following things.
 
@@ -31,7 +31,7 @@ To install the Helm chart the only requirement is [Helm](https://helm.sh/).
 However, additional executables may be required to create/manage the cluster(s) (_e.g._, Kind and kubectl),
 to join Workload Execution Clusters (WECs) (_e.g._, clusteradm),
 and to interact with Control Planes (_e.g._, kubectl), _etc_.
-For such purpose, a full list of executable that may be required can be found [here](./pre-reqs.md).
+For such purpose, a full list of executable that may be required can be found [here](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/pre-reqs.md).
 
 The setup of KubeStellar via the Core chart requires the existence of a KubeFlex hosting cluster.
 
@@ -49,14 +49,14 @@ While not a complete list of supported hosting clusters, here we discuss how to 
     By default the KubeStellar Core chart uses a test domain `localtest.me`, which is OK for testing on a single host machine. However, for scenarios that span more than one machine, it is necessary to set `--set "kubeflex-operator.domain=<domain>"` to a more appropriate `<domain>` that can be reached from Workload Execution Clusters (WECs).
 
     For convenience, a new local **Kind** cluster that satisfies the requirements for KubeStellar setup
-    and that can be used to exercises the [examples](./example-scenarios.md) can be created with the following command:
+    and that can be used to exercises the [examples](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md) can be created with the following command:
 
     ```shell
     bash <(curl -s https://raw.githubusercontent.com/kubestellar/kubestellar/v$KUBESTELLAR_VERSION/scripts/create-kind-cluster-with-SSL-passthrough.sh) --name kubeflex --port 9443
     ```
 
     Alternatively, a new local **k3s** cluster that satisfies the requirements for KubeStellar setup
-    and that can be used to exercises the [examples](./example-scenarios.md) can be created with the following command:
+    and that can be used to exercises the [examples](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md) can be created with the following command:
 
     ```shell
     bash <(curl -s https://raw.githubusercontent.com/kubestellar/kubestellar/v$KUBESTELLAR_VERSION/scripts/create-k3s-cluster-with-SSL-passthrough.sh) --port 9443
@@ -234,7 +234,7 @@ User defined control planes can be added using additional values files or `--set
 - add two ITSes named its1 and its2 of of type vcluster and host, respectively: `--set-json='ITSes=[{"name":"its1"},{"name":"its2","type":"host"}]'`
 - add a single WDS named wds1 of default k8s type connected to the one and only ITS: `--set-json='WDSes=[{"name":"wds1"}]'`
 
-A KubeStellar Core installation that is consistent with [Getting Started](get-started.md) and and supports [the example scenarios](./example-scenarios.md) could be achieved with the following command:
+A KubeStellar Core installation that is consistent with [Getting Started](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md) and and supports [the example scenarios](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md) could be achieved with the following command:
 
 ```shell
 helm upgrade --install ks-core oci://ghcr.io/kubestellar/kubestellar/core-chart --version "$KUBESTELLAR_VERSION" \
@@ -433,7 +433,7 @@ the `kflex` CLI and one not.
 
 ## Argo CD integration
 
-KubeStellar Core Helm chart allows to deploy ArgoCD in the KubeFlex hosting cluster, register every WDS as a target cluster in Argo CD, and create Argo CD applications as specified by chart values, as explained [here](core-chart-argocd.md).
+KubeStellar Core Helm chart allows to deploy ArgoCD in the KubeFlex hosting cluster, register every WDS as a target cluster in Argo CD, and create Argo CD applications as specified by chart values, as explained [here](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart-argocd.md).
 
 ## Uninstalling the KubeStellar Core chart
 

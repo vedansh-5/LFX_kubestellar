@@ -1,5 +1,5 @@
 # KubeStellar UI (User Interface)
-![UI splash page](kubestellar_splash_screen.png)
+![UI splash page](https://github.com/kubestellar/kubestellar/blob/main/docs/content/ui-docs/kubestellar_splash_screen.png)
 
 The KubeStellar UI is an add-on developed to make managing workloads via KubeStellar even simpler and more intuitive.
 With its web-based interface, you can view and manage your Workload Definition Space, Inventory and Transport Space, and Binding Policies all interactively, with both drag-and-drop and text-based interface modes available for use.

@@ -135,7 +135,7 @@ This release changes the schema for a `BindingPolicy` so that the request for si
 This patch release fixes some bugs and some documentation oversights. Following are the most notable ones.
 
 - The transport controller bugs that strike when there is more than one `ManifestWork` for a given `Binding` (`BindingPolicy`) have been fixed (we hope).
-- The [Getting Started document](get-started.md) has been updated to include documentation of how to use the script that does the steps listed in that document.
+- The [Getting Started document](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md) has been updated to include documentation of how to use the script that does the steps listed in that document.
 
 ### Remaining limitations in 0.25.1
 
@@ -144,7 +144,7 @@ This patch release fixes some bugs and some documentation oversights. Following 
 * Objects on two different WDSes shouldn't have the exact same identifier (same group, version, kind, name and namespace). Such a conflict is currently not identified.
 * Creation, deletion, and modification of `CustomTransform` objects does not cause corresponding updates to the workload objects in the WECs; the current state of the `CustomTransform` objects is simply read at any moment when the objects in the WECs are being updated for other reasons.
 * It is not known what actually happens when two different `Binding` objects list the same workload object and either or both say "create only".
-* If the workload object count or volume vs the configured limits on content of a `ManifestWork` causes multiple `ManifestWork` to be created for one `Binding` (`BindingPolicy`) then there may be transients where workload objects are deleted and re-created in a WEC --- which, in addition to possibly being troubling on its own, will certainly thwart the "create-only" functionality. Unless you workload is very large, you can avoid this situation by setting the `transport_controller.max_num_wrapped` "value" of [the core Helm chart](core-chart.md) to a number that is larger than the number of your workload objects (double check your count in your `Binding` object).
+* If the workload object count or volume vs the configured limits on content of a `ManifestWork` causes multiple `ManifestWork` to be created for one `Binding` (`BindingPolicy`) then there may be transients where workload objects are deleted and re-created in a WEC --- which, in addition to possibly being troubling on its own, will certainly thwart the "create-only" functionality. Unless you workload is very large, you can avoid this situation by setting the `transport_controller.max_num_wrapped` "value" of [the core Helm chart](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md) to a number that is larger than the number of your workload objects (double check your count in your `Binding` object).
 
 
 ## 0.25.0 and its candidates

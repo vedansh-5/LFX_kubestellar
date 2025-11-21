@@ -6,7 +6,7 @@ You can use the [check-pre-req](#automated-check-of-prerequisites-for-kubestella
 
 ## Infrastructure (clusters)
 
-Because of its multicluster architecture, KubeStellar requires that you have the necessary privileges and infrastructure access to create and/or configure the necessary Kubernetes clusters. These are the following; see [the architecture document](architecture.md) for more details.
+Because of its multicluster architecture, KubeStellar requires that you have the necessary privileges and infrastructure access to create and/or configure the necessary Kubernetes clusters. These are the following; see [the architecture document](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/architecture.md) for more details.
 
 - One cluster to serve as the [KubeFlex](https://github.com/kubestellar/kubeflex/) hosting cluster.
 - Any additional Kubernetes clusters that are not created by KubeFlex but you will use as a WDS or ITS.
@@ -43,7 +43,7 @@ follow [these instructions](https://github.com/kubestellar/kubeflex/blob/main/do
 
     At the end of the install make sure that the OCM CLI, clusteradm, is in your `$PATH`.
 
-- **helm** version >= 3. To deploy the Kubestellar and kubeflex charts. Your `helm` command must not be broken; see [the known issue](knownissue-helm-ghcr.md).
+- **helm** version >= 3. To deploy the Kubestellar and kubeflex charts. Your `helm` command must not be broken; see [the known issue](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/knownissue-helm-ghcr.md).
 - [**kubectl**](https://kubernetes.io/docs/tasks/tools/) version >= 1.29 - to access the kubernetes clusters
 
 ## Additional Software for the Getting Started setup
@@ -79,7 +79,7 @@ To build and _**test**_ KubeStellar properly, you will also need
 <!-- start tag for check script  include -->
 
 ## Automated Check of Prerequisites for KubeStellar
-The [check_pre_req](https://github.com/kubestellar/kubestellar/blob/main/scripts/check_pre_req.sh) script offers a convenient way to check for the prerequisites needed for [KubeStellar](./pre-reqs.md) deployment and [use](./example-scenarios.md).
+The [check_pre_req](https://github.com/kubestellar/kubestellar/blob/main/scripts/check_pre_req.sh) script offers a convenient way to check for the prerequisites needed for [KubeStellar](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/pre-reqs.md) deployment and [use](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md).
 
 This script is self-contained, so it is suitable for "curl-to-bash" style usage. The latest development version is at [https://raw.githubusercontent.com/kubestellar/kubestellar/refs/heads/main/scripts/check_pre_req.sh](https://raw.githubusercontent.com/kubestellar/kubestellar/refs/heads/main/scripts/check_pre_req.sh). To check the prerequisites for using a particular release of KubeStellar, you will want to use the script from that release.
 

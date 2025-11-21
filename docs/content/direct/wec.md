@@ -82,7 +82,7 @@ clusteradm join --hub-token <token> --hub-apiserver <api-server-url> --cluster-n
 clusteradm --context its1 accept --clusters cluster1
 ```
 
-For detailed registration instructions, see [WEC Registration](wec-registration.md).
+For detailed registration instructions, see [WEC Registration](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/wec-registration.md).
 
 ## Labeling WECs
 
@@ -119,4 +119,4 @@ KubeStellar performs transformations on workloads before they are deployed to WE
 1. **Generic transformations** that apply to all workloads
 2. **Rule-based customizations** that adapt workloads to specific WEC characteristics
 
-For more information, see [Transforming Desired State](transforming.md).
+For more information, see [Transforming Desired State](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/transforming.md).

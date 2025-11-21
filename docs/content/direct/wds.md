@@ -11,7 +11,7 @@
 
 ## What is a WDS?
 
-A Workload Description Space (WDS) is a space in the [KubeStellar architecture](architecture.md) that serves as the primary interface for users to define and manage workloads for multi-cluster deployment. The WDS consists of a Kubernetes API server with storage that:
+A Workload Description Space (WDS) is a space in the [KubeStellar architecture](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/architecture.md) that serves as the primary interface for users to define and manage workloads for multi-cluster deployment. The WDS consists of a Kubernetes API server with storage that:
 
 - Stores the definitions of workloads in their native Kubernetes format
 - Stores the control objects (`BindingPolicy`, `Binding`, `Status Collector`, `CombinedStatus` and `CustomTransform`) that define how workloads are distributed
@@ -21,7 +21,7 @@ A Workload Description Space (WDS) is a space in the [KubeStellar architecture](
 
 ## Creating a WDS
 
-Currently the only documented way to create a WDS is by using the [core Helm chart](core-chart.md). See [the step-by-step instructions for getting started](get-started.md#use-core-helm-chart-to-initialize-kubeflex-and-create-its-and-wds) for an example.
+Currently the only documented way to create a WDS is by using the [core Helm chart](http://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md). See [the step-by-step instructions for getting started](get-started.md#use-core-helm-chart-to-initialize-kubeflex-and-create-its-and-wds) for an example.
 
 The adventurous user could --- after using the core Helm chart to get this `PostCreateHook` object created --- create a WDS directly using the KubeFlex CLI or API to create a suitable `ControlPlane` object that uses the same `PostCreateHook` as the core Helm chart does for creating WDSes.
 
@@ -58,8 +58,8 @@ When using KubeFlex ControlPlane types `host` or `external` for your WDS, step 1
 
 The following two Pods run the KubeStellar controllers for a WDS.
 
-1. The [KubeStellar Controller Manager](architecture.md#kubestellar-controller-manager).
-2. The [Transport Controller](architecture.md#pluggable-transport-controller).
+1. The [KubeStellar Controller Manager](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/architecture.md#kubestellar-controller-manager).
+2. The [Transport Controller](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/architecture.md#pluggable-transport-controller).
 
 These controllers are managed as `Deployment` objects in the KubeFlex hosting cluster. These `Deployment` objects are created by the setup procedures discussed above.
 

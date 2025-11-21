@@ -1,6 +1,6 @@
 # Testing
 
-Make sure all pre-requisites are installed as described in [pre-reqs](pre-reqs.md).
+Make sure all pre-requisites are installed as described in [pre-reqs](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/pre-reqs.md).
 
 ## Unit testing
 
@@ -40,4 +40,4 @@ See `test/e2e/` in the GitHub repository. It has a README.
 
 ## Testing releases
 
-See [the release testing doc](release-testing.md).
+See [the release testing doc](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/release-testing.md).

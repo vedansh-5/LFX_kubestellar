@@ -25,12 +25,12 @@ Kubernetes practice.
 - **4**: messages that appear O(1) times per sync. A sync is when a controller reads the current state of one API object and reacts to that.
 - **5**: more detailed messages that appear O(1) times per sync.
 
-The [core Helm chart](core-chart.md) has "values" that set the
+The [core Helm chart](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md) has "values" that set the
 verbosity (`-v`) of various controllers.
 
 ## Things to look at
 
-- Existence and version of dependencies. There is [a document](pre-reqs.md) and a checking script (`scripts/check_pre_req.sh`).
+- Existence and version of dependencies. There is [a document](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/pre-reqs.md) and a checking script (`scripts/check_pre_req.sh`).
 - While double-checking your input is never bad, using `kubectl get -o yaml --show-managed-fields` to examine the live API objects adds some good stuff: confirmation that your input was received and parsed as expected, display of any error messages in your API objects, timestamps in the metadata (helpful for comparing with log messages), indication of what last wrote to each part of your API objects and when.
 - When basic stuff is not working, survey the Pod objects in the KubeFlex hosting cluster to look for ones that are damaged in some way. For example: you can get a summary with the command `kubectl --context kind-kubeflex get pods -A` --- adjust as necessary for the name of your kubeconfig context to use for the KubeFlex hosting cluster.
 - Remember that for each of your BindingPolicy objects, there is a corresponding Binding object that reports what is matching the policy object.
@@ -43,7 +43,7 @@ verbosity (`-v`) of various controllers.
 
 ## Some known problems
 
-We have [the start of a list](known-issues.md).
+We have [the start of a list](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/known-issues.md).
 
 ## Making a good trouble report
 

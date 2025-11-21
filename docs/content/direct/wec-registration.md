@@ -27,7 +27,7 @@ Before registering a WEC, ensure you have:
 5. **`clusteradm` CLI tool** installed on the machine where you will run the registration commands ([installation guide](https://open-cluster-management.io/docs/getting-started/installation/start-the-control-plane/))
 6. **Sufficient permissions** to create resources in both clusters (typically cluster-admin or equivalent)
 
-For a complete understanding of how WEC registration fits into the overall KubeStellar architecture, see [The Full Story](user-guide-intro.md#the-full-story).
+For a complete understanding of how WEC registration fits into the overall KubeStellar architecture, see [The Full Story](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/user-guide-intro.md#the-full-story).
 
 To verify your ITS is ready for WEC registration:
 
@@ -258,7 +258,7 @@ kubectl --context <wec-context> delete namespace open-cluster-management-agent-a
 
 ## Troubleshooting
 
-For troubleshooting WEC registration issues, see the [general troubleshooting guide](troubleshooting.md). Common issues include:
+For troubleshooting WEC registration issues, see the [general troubleshooting guide](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/troubleshooting.md). Common issues include:
 
 - Certificate Signing Requests not appearing
 - Network connectivity problems
@@ -274,6 +274,6 @@ After successfully registering your WEC, you can:
 3. **Set up monitoring** for your WEC
 4. **Register additional WECs** to scale your deployment
 
-For more information on using WECs with KubeStellar, see the [example scenarios](example-scenarios.md) and [BindingPolicy documentation](binding.md/#bindingpolicy).
+For more information on using WECs with KubeStellar, see the [example scenarios](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/example-scenarios.md) and [BindingPolicy documentation](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/binding.md/#bindingpolicy).
 
-For the complete picture of how WEC registration fits into the overall KubeStellar architecture, see [The Full Story](user-guide-intro.md#the-full-story).
+For the complete picture of how WEC registration fits into the overall KubeStellar architecture, see [The Full Story](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/user-guide-intro.md#the-full-story).

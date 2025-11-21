@@ -39,7 +39,7 @@ wds0   True     True    host       186d
 
 ## Teardown procedure depends on Helm charts used
 
-If the [KubeStellar core Helm chart](core-chart.md) was used then you
+If the [KubeStellar core Helm chart](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md) was used then you
 will be deleting the instances of that, and this relieves you of
 having to do some deletions directly.
 
@@ -83,7 +83,7 @@ addon, so it is not effective for you to simply delete them.
 
 KubeStellar's OCM Status Addon was installed by a Helm chart from
 [ks/OSA](https://github.com/kubestellar/ocm-status-addon). When using
-KubeStellar's [core Helm chart](core-chart.md), the OSA chart is
+KubeStellar's [core Helm chart](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md), the OSA chart is
 instantiated by a command run inside a container of a `Job`, so merely
 deleting the core chart instance does not remove the OSA chart
 instance; you must do it yourself.
@@ -189,7 +189,7 @@ postgres                      	kubeflex-system      	1       	2024-06-03 22:33:3
 ...
 ```
 
-If you used the [KubeStellar core chart](core-chart.md) then one or
+If you used the [KubeStellar core chart](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md) then one or
 more instances of it will be in that list. In this case you can simply
 delete those Helm chart instances. If the core chart was not used to
 install KubeFlex in its hosting cluster then you will need to delete

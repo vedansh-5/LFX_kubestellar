@@ -27,7 +27,7 @@ rendering take precedence.
 
 ### Style Guide
 
-With more contributors writing pages for our documentation, we are implementing a [Style Guide](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/docs-styleguide.md ) to help ensure more usable documenations with a consistent style and voice.
+With more contributors writing pages for our documentation, we are implementing a [Style Guide](docs-styleguide.md) to help ensure more usable documenations with a consistent style and voice.
 
 ### GitHub pages
 
@@ -100,7 +100,7 @@ in your PR.
     **NOTE: If you already created a fork but only included the main branch** then you can remedy the problem by propagating the `gh-pages` branch into your fork using `git` commands
 
 5. Go to the Settings tab of your fork, select "Pages" in the navigation panel on the left, and make sure that you have told GitHub to publish your site based on the contents of the `gh-pages` branch in your fork. It will look something like the following
-    ![Configure publishing your GitHub pages](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/images/github-pages-config-example.png)
+    ![Configure publishing your GitHub pages](../../direct/images/github-pages-config-example.png)
 
 #### Enabling GitHub pages for a fork that already exists
 
@@ -122,7 +122,9 @@ in your PR.
 5. Click on the Run Workflow button on the right !["Run workflow" button](https://github.com/user-attachments/assets/5d3d23be-6c8f-454e-bf2c-0c58c8894957)
 6. Select the branch you wish to render and click on the second Run Workflow Button ![Selecting the branch to render](https://github.com/user-attachments/assets/427b827d-555c-4d36-b9c8-485eda002428)
 7. If that workflow completes successfully, it will automatically call the **Pages build and deployment** workflow.
-8. You can observe the progress of the workflows on the Actions page; a green checkmark circle indicates successful completion.<br />![Relevant workflow runs](https://github.com/user-attachments/assets/b9ce40f8-b744-4b3c-bc20-a4814243e85e)
+8. You can observe the progress of the workflows on the Actions page; a green checkmark circle indicates successful completion.
+
+![Relevant workflow runs](https://github.com/user-attachments/assets/b9ce40f8-b744-4b3c-bc20-a4814243e85e)
 9. After a minute or so, you should be able to preview your new version of the website at `https://${repo_owner}.github.io/${fork_name}/${branch_name}`
 
 #### Informational Errors
@@ -250,7 +252,7 @@ is published as the version named "unreleased-development".
 
 We have a few shortcut urls that come in handy when referring others to our project:
 
-<b>note:</b> You need to join our mailing list first to get access to some of the links that follow ([{{ config.docs_url }}/joinus](https://kubestellar.io/joinus))
+**note:** You need to join our mailing list first to get access to some of the links that follow ([{{ config.docs_url }}/joinus](https://kubestellar.io/joinus))
 
 - [https://kubestellar.io/agenda](https://kubestellar.io/agenda) - our community meeting agenda google doc
 - [https://kubestellar.io/blog](https://kubestellar.io/blog) - our medium reading list
@@ -315,8 +317,12 @@ and in context that can look something like this:
 bash <(curl -s \{\{ config.repo_raw_url \}\}/\{\{ config.ks_branch \}\}/bootstrap/bootstrap-kubestellar.sh) --kubestellar-version \{\{ config.ks_tag \}\}
 
 
-<b>note:</b><br /> 
-&nbsp;&nbsp;&nbsp;&nbsp;- We also check for broken links as part of our PR pipeline.  For more information check out our <a href="{{ config.repo_url }}/actions/workflows/broken-links-crawler.yml">Broken Links Crawler</a><br />
+**note:**
+
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;- We also check for broken links as part of our PR pipeline.  For more information check out our <a href="{{ config.repo_url }}/actions/workflows/broken-links-crawler.yml">Broken Links Crawler</a>
+
+
 
 ### Navigation (website menu)
 
@@ -342,10 +348,10 @@ These variables can be referenced as \{\{ page.meta.short_name \}\} and \{\{ pag
 We make extensive use of 'include-markdown' to help us keep our documentation modular and up-to-date.  To use 'include-markdown' you must add a block in your document that refers to a block in your external document content:
 
 In your original markdown document, add a block that refers to the external markdown you want to include:
-![Include Markdown](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/include-markdown-example.png)
+![Include Markdown](include-markdown-example.png)
 
 In the document you want to include, add the start and end tags you configured in the include-markdown block in your original document:
-![Included Markdown](https://github.com/kubestellar/kubestellar/blob/main/docs/content/contribution-guidelines/operations/included-markdown-example.png)
+![Included Markdown](included-markdown-example.png)
 
 for more information on the 'include-markdown' plugin for mkdocs look [here](https://github.com/mondeja/mkdocs-include-markdown-plugin)
 
@@ -359,56 +365,70 @@ Here are some examples of how we use codeblocks.
 
 #### Seen and executed
 
-For a codeblock that can be 'tested' (and seen by the reader) as part of our CI, use the <b><i>`shell`</i></b> block:
-<br/><b>codeblock:</b>
+For a codeblock that can be 'tested' (and seen by the reader) as part of our CI, use the ***`shell`*** block:
+
+
+**codeblock:**
 ````
 ```shell
 mkdocs serve
 ```
 ````
-<b>as seen by reader:</b>
+**as seen by reader:**
 ```shell
 mkdocs serve
 ```
-<br/>
+
+
+
 
 #### Executed but not seen
 
 (Think hard before hiding stuff from your reader.)
 
-For a codeblock that should be 'tested', BUT <b>not</b> seen by the reader, use the <b><i>`.bash`</i></b> with the plain codeblock, and the <b><i>'.hide-me'</i></b> style (great for hiding a sleep command that user does not need to run, but CI does):
-<br/><b>codeblock:</b>
+For a codeblock that should be 'tested', BUT **not** seen by the reader, use the ***`.bash`*** with the plain codeblock, and the ***'.hide-me'*** style (great for hiding a sleep command that user does not need to run, but CI does):
+
+
+**codeblock:**
 ````
 ``` {.bash .hide-me}
 sleep 10
 ```
 ````
-<b>as seen by reader:</b>
+**as seen by reader:**
 ```
 ```
-<br/>
+
+
+
 
 #### Seen but not executed
 
 (To avoid confusing readers of the HTML, this should be used only for _output_ seen in a shell session.)
 
-For a codeblock that should <u>not</u> be 'tested' as part of our CI, use the <b><i>`.bash`</i></b> with the plain codeblock, and <b>without</b> the <b><i>'.hide-me'</b></i> style:
-<br/><b>codeblock:</b>
+For a codeblock that should <span style={{ textDecoration: "underline" }}>not</span> be 'tested' as part of our CI, use the ***`.bash`*** with the plain codeblock, and **without** the ***'.hide-me' style:
+
+
+**codeblock:**
 ````
 ``` {.bash}
 mkdocs server
 ```
 ````
-<b>as seen by reader:</b>
+**as seen by reader:**
 ``` {.bash}
 mkdocs server
 ```
-<br/>
+
+
+
 
 #### Seen but not executed and no copy button
 
-For a codeblock that should not be 'tested', be seen by the reader, and not include a 'copy' icon (great for output-only instances), use the <b><i>`.bash`</i></b> codeblock <b>without</b> the <b><i>'.no-copy'</b></i> style:
-<br/><b>codeblock:</b>
+For a codeblock that should not be 'tested', be seen by the reader, and not include a 'copy' icon (great for output-only instances), use the ***`.bash`*** codeblock without** the ***'.no-copy'* style:
+
+
+**codeblock:**
 ```` {.bash .no-copy}
 ``` {.bash .no-copy}
 I0412 15:15:57.867837   94634 shared_informer.go:282] Waiting for caches to sync for placement-translator
@@ -416,18 +436,22 @@ I0412 15:15:57.969533   94634 shared_informer.go:289] Caches are synced for plac
 I0412 15:15:57.970003   94634 shared_informer.go:282] Waiting for caches to sync for what-resolver
 ```
 ````
-<b>as seen by reader:</b>
+**as seen by reader:**
 ``` {.bash .no-copy}
 I0412 15:15:57.867837   94634 shared_informer.go:282] Waiting for caches to sync for placement-translator
 I0412 15:15:57.969533   94634 shared_informer.go:289] Caches are synced for placement-translator
 I0412 15:15:57.970003   94634 shared_informer.go:282] Waiting for caches to sync for what-resolver
 ```
-<br/>
+
+
+
 
 #### Other language-specific highlighting
 
-For other language-specific highlighting (yaml, etc.), use the <b><i>yaml</i></b> codeblock
-<br/><b>codeblock:</b>
+For other language-specific highlighting (yaml, etc.), use the **yaml*** codeblock
+
+
+codeblock:**
 ````
 ```yaml
 nav:
@@ -437,7 +461,7 @@ nav:
       - Guidelines: Contribution guidelines/CONTRIBUTING.md
 ```
 ````
-<b>as seen by reader:</b>
+**as seen by reader:**
 ```yaml
 nav:
   - Home: index.md
@@ -445,24 +469,30 @@ nav:
   - Contributing: 
       - Guidelines: Contribution guidelines/CONTRIBUTING.md
 ```
-<br/>
+
+
+
 
 #### Codeblock with a title
 
-For a codeblock that has a title, and will not be tested, use the <b><i>'title'</i></b> parameter in conjunction with the plain codeblock (greater for showing or prescribing contents of files):
-<br/><b>codeblock:</b>
+For a codeblock that has a title, and will not be tested, use the ***'title'*** parameter in conjunction with the plain codeblock (greater for showing or prescribing contents of files):
+
+
+**codeblock:**
 ````
 ``` title="testing.sh"
 #!/bin/sh
 echo hello KubeStellar
 ```
 ````
-<b>as seen by reader:</b>
+**as seen by reader:**
 ``` title="testing.sh"
 #!/bin/sh
 echo hello KubeStellar
 ```
-<br/>
+
+
+
 
 (other variations are possible, PR an update to the <a href="{{ config.repo_url }}/blob/{{ config.ks_branch }}/docs/overrides/stylesheets/kubestellar.css">kubestellar.css</a> file and, once approved, use the style on the plain codeblock in your documentation.)
 
@@ -472,8 +502,8 @@ How do we ensure that our documented examples work?  Simple, we 'execute' our do
 #### The way it works:
 - create your .md file as you normally would
 - add codeblocks that can be tested, tested but hidden, or not tested at all:
-    - use <b><i>'shell'</i></b> to indicate code you want to be tested
-    - use <b><i>'.bash'</i></b> with the plain codeblock, and the <b><i>'.hide-md'</i></b> style for code you want to be tested, but hidden from the reader (some like this, but its not cool if you want others to run your instructions without hiccups)
+    - use ***'shell'*** to indicate code you want to be tested
+    - use ***'.bash'*** with the plain codeblock, and the ***'.hide-md'*** style for code you want to be tested, but hidden from the reader (some like this, but its not cool if you want others to run your instructions without hiccups)
     - use plain codeblock (```) if you want to show sample output that is not to be tested
 - you can use 'include-markdown' blocks, and they will also be executed (or not), depending on the codeblock style you use in the included markdown files.
 
@@ -495,13 +525,13 @@ docs-ecutable:
 	MANIFEST=$(MANIFEST) docs/scripts/docs-ecutable.sh
 ```
 
-You give the path from that follows the '{{config.repo_url}}/docs' path, and name of the .md file you want to 'execute'/'test' as the value for the <b><i>MANIFEST</i></b> variable:
+You give the path from that follows the '{{config.repo_url}}/docs' path, and name of the .md file you want to 'execute'/'test' as the value for the ***MANIFEST*** variable:
 
 ``` title="How to 'make' our docs-ecutable target"
 make MANIFEST="'docs/content/Getting-Started/quickstart.md'" docs-ecutable
 ```
 
-<b>note:</b> there are single and double-quotes used here to avoid issues with 'spaces' used in files names or directories.  Use the single and double-quotes as specified in the quickstart example here.
+**note:** there are single and double-quotes used here to avoid issues with 'spaces' used in files names or directories.  Use the single and double-quotes as specified in the quickstart example here.
 
 #### The new and improved secret sauce:
 - The newer code for executing bash snippets in documentation is at <a href="{{ config.repo_url }}/blob/{{ config.ks_branch }}/docs/scripts/execute-html.sh">{{ config.repo_url }}/blob/{{ config.ks_branch }}/docs/scripts/execute-html.sh</a>
@@ -528,7 +558,7 @@ The `make` target requires the variable `MANIFEST` to be set to the directory th
 make MANIFEST="Coding Milestones/PoC2023q1/example1" execute-html
 ```
 
-<b>note:</b> this target has no special needs for quoting --- which is not to deny the quoting that your shell needs.
+**note:** this target has no special needs for quoting --- which is not to deny the quoting that your shell needs.
 
 ### Important files in our gh-pages branch
 #### index.html and home.html

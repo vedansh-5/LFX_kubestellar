@@ -7,7 +7,7 @@ This user guide is an ongoing project. If you find errors, please point them out
 
 ## Simple Examples
 
-If you want to try a simple installation process and example then you can try out [Getting Started](get-started.md), which uses [kind](https://kind.sigs.k8s.io/) and a helm chart. The [helm chart](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md) supports many options; the instructions on the Getting Started page show only the chart's usage in that recipe.
+If you want to try a simple installation process and example then you can try out [Getting Started](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/get-started.md), which uses [kind](https://kind.sigs.k8s.io/) and a helm chart. The [helm chart](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/core-chart.md) supports many options; the instructions on the Getting Started page show only the chart's usage in that recipe.
 
 Another simple example, which starts with (a slightly modified version of) the OCM Quick Start is [here](https://github.com/kubestellar/kubestellar/blob/main/docs/content/direct/start-from-ocm.md).
 
